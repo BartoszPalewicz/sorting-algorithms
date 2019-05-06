@@ -19,7 +19,7 @@ ms = Date.now();
 
 document.write(str);
 document.write(parseInt(ms-s));
-document.write("<br>");
+document.write("ms <br>");
 }
 
 function swap(arr, i, j){
