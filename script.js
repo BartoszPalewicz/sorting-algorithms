@@ -1,17 +1,3 @@
-// var canvas = document.getElementById("canvas");
-// var c = canvas.getContext("2d");
-// var w = canvas.width;
-// var h = canvas.height;
-// var x=0;
-
-// function draw(){
-//     c.clearRect(0, 0, w, h);
-//     c.rect(x, 100, 100, 100);
-//     c.fillStyle="#E00";
-//     c.fill();
-//     x++;
-// }
-// setInterval(draw, 30)
 
 
 var arr = [];
@@ -19,7 +5,7 @@ var len = 10000
 function shuffle(){
     for(var i=0; i<len; i++){
         arr[i]=parseInt(Math.floor(Math.random()*10000));
-        //document.write(tab[i]+" ");
+        
     }
 }
 function start(){
@@ -80,13 +66,13 @@ shuffle();
 start();
 function mergeSort (arr) {
     if (arr.length === 1) {
-      // return once we hit an array with a single item
+      
       return arr
     }
   
-    const middle = Math.floor(arr.length / 2) // get the middle item of the array rounded down
-    const left = arr.slice(0, middle) // items on the left side
-    const right = arr.slice(middle) // items on the right side
+    const middle = Math.floor(arr.length / 2) 
+    const left = arr.slice(0, middle) 
+    const right = arr.slice(middle) 
   
     return merge(
       mergeSort(left),
@@ -94,7 +80,6 @@ function mergeSort (arr) {
     )
   }
 
-  // compare the arrays item by item and return the concatenated result
   function merge (left, right) {
     let result = []
     let indexLeft = 0
@@ -121,13 +106,13 @@ start();
 function quickSort(arr, left, right){
     var pivot,
     partitionIndex;
- //var len = arr.length, 
+ 
  
    if(left < right){
      pivot = right;
      partitionIndex = partition(arr, pivot, left, right);
      
-    //sort left and right
+    
     quickSort(arr, left, partitionIndex - 1);
     quickSort(arr, partitionIndex + 1, right);
    }
@@ -173,8 +158,7 @@ function countingSort(arr){
 }
 countingSort(arr)
 stop("count: ");
-// for(var i =0; i<arr.length; i++)
-// document.write(arr[i]+";")
+
 }
 
 function insertSort() {
@@ -197,8 +181,7 @@ function insertSort() {
       arr[j + 1] = temp;
     }
     stop("insert: ")
-    // for(var i =0; i<arr.length; i++)
-    // document.write(arr[i]+";")    
+ 
   }
 
 
